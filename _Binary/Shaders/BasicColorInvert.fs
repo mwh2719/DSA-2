@@ -3,7 +3,7 @@
 in vec3 Color;
 
 uniform vec3 SolidColor = vec3(-1,-1,-1);
-uniform bool Complimentary = false;
+uniform int Complimentary = 0;
 
 out vec4 Fragment;
 
@@ -15,7 +15,7 @@ void main()
 		output = SolidColor;
 	}
 	
-	if(Complimentary == true)
+	if(Complimentary == 1)
 	{
 		output = vec3(1.0f, 1.0f, 1.0f) - output;
 	}
